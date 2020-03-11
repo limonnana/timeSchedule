@@ -1,5 +1,7 @@
 package com.limonn.timer.controller;
 
+import com.limonn.timer.entities.Schedule;
+
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,6 +11,8 @@ public class MainController {
 
     public static void main(String[] args) {
 
+        Schedule s = new Schedule("4");
+        /**
         LocalDateTime localDateTime = LocalDateTime.now();
 
 
@@ -31,6 +35,7 @@ public class MainController {
         LocalDateTime custom = LocalDateTime.of(year, localDateTime.getMonth(), day, 16, 30);
 
         System.out.println("Custom: " + custom);
+         **/
 
     }
 }
