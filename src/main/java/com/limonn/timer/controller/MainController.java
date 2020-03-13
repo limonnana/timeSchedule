@@ -1,17 +1,27 @@
 package com.limonn.timer.controller;
 
 import com.limonn.timer.entities.Schedule;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 
+@CrossOrigin(origins = "**", maxAge = 3600)
+@RestController
+@RequestMapping("/timming")
 public class MainController {
+
+   // public Schedule getSchedule(){
+
+  //  }
 
     public static void main(String[] args) {
 
-        Schedule s = new Schedule("4");
+        Schedule s = new Schedule("10");
         /**
         LocalDateTime localDateTime = LocalDateTime.now();
 
