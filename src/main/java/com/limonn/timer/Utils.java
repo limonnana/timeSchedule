@@ -74,9 +74,28 @@ public class Utils {
         if(minute.equals("0")){
             minute = "00";
         }
+        int minuteI = Integer.parseInt(minute);
+        if(minuteI < 10){
+            minute = "0" + minute;
+        }
 
         result = hour + ":" + minute;
 
         return result;
+    }
+
+    public String trainTimeFormated(String trainTime){
+
+        LocalDateTime l = fromStringTimeToTimeTrain(trainTime);
+
+        String formatedTime = fromTimeToString(l);
+
+        int lenghtString = formatedTime.length();
+
+        if(lenghtString > 4){
+            formatedTime = formatedTime.substring(0, 5);
+        }
+
+        return formatedTime;
     }
 }

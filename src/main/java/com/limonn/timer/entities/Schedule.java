@@ -10,20 +10,9 @@ public class Schedule {
 
 
     private String train;
-    private LocalDateTime trainTime;
     private String out;
-    private LocalDateTime outTime;
     private String start;
-    private LocalDateTime startTime;
 
-    @Autowired
-    private Utils utils;
-
-    public Schedule(String train){
-        this.train = train;
-        this.trainTime = utils.fromStringTimeToTimeTrain(train);
-        System.out.println(this.trainTime);
-    }
 
     public String getTrain() {
         return train;
@@ -31,14 +20,6 @@ public class Schedule {
 
     public void setTrain(String train) {
         this.train = train;
-    }
-
-    public LocalDateTime getTrainTime() {
-        return trainTime;
-    }
-
-    public void setTrainTime(LocalDateTime trainTime) {
-        this.trainTime = trainTime;
     }
 
     public String getOut() {
@@ -49,14 +30,6 @@ public class Schedule {
         this.out = out;
     }
 
-    public LocalDateTime getOutTime() {
-        return outTime;
-    }
-
-    public void setOutTime(LocalDateTime outTime) {
-        this.outTime = outTime;
-    }
-
     public String getStart() {
         return start;
     }
@@ -65,13 +38,7 @@ public class Schedule {
         this.start = start;
     }
 
-    public LocalDateTime getStartTime() {
-        return startTime;
-    }
 
-    public void setStartTime(LocalDateTime startTime) {
-        this.startTime = startTime;
-    }
 
 
 }
